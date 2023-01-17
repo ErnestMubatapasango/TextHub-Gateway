@@ -10,8 +10,10 @@ import { GiPayMoney, GiReceiveMoney, GiWallet, /* GiPayMoney, GiReceiveMoney, Gi
 import {FiActivity} from "react-icons/fi"
 import {BiHelpCircle} from "react-icons/bi"
 import {BsFillPersonCheckFill} from 'react-icons/bs'
-import Customer from '../views/Customer';
-import Sender from '../views/Sender';
+
+//navigation
+import { BrowserRouter as Router,Routes, Route} from 'react-router-dom'
+
 
 
 
@@ -19,9 +21,11 @@ import Sender from '../views/Sender';
 
 export default function Dashboard() {
 
+
   const today = new Date()
 
   return (
+  
     <DashboardContainer>
       <SideBarContainer>
 
@@ -30,17 +34,17 @@ export default function Dashboard() {
         </SidebarHeader>
         
         <SidebarMain>
-            <SidebarHeading to="#" activeClassName="any">
+            <SidebarHeading to="/" activeClassName="any">
               <Icon color="#004aad" size={1}>{<MdSpaceDashboard/>}</Icon>
               <SideTitle size={1}>Dashboard</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="#" activeClassName="any">
+            <SidebarHeading to="/customers" activeClassName="any">
               <Icon color="#004aad" size={1}>{<MdOutlineSendToMobile/>}</Icon>
               <SideTitle size={1}>Customers</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="#" activeClassName="any">
+            <SidebarHeading to="/groups" activeClassName="any">
               <Icon color="#004aad" size={1}>{<GiWallet/>}</Icon>
               <SideTitle size={1}>Groups</SideTitle>
             </SidebarHeading>
@@ -51,16 +55,21 @@ export default function Dashboard() {
             </SidebarHeading>
 
             <SidebarHeading to="#" activeClassName="any">
+              <Icon color="#004aad" size={1}>{<GiWallet/>}</Icon>
+              <SideTitle size={1}>Bulk SMS</SideTitle>
+            </SidebarHeading>
+
+            <SidebarHeading to="#" activeClassName="any">
               <Icon color="#004aad" size={1}>{<FiActivity/>}</Icon>
               <SideTitle size={1}>SMS History</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="#" activeClassName="any">
+            <SidebarHeading to="/sender" activeClassName="any">
               <Icon color="#004aad" size={1}>{<AiFillSetting/>}</Icon>
               <SideTitle size={1}>Sender Details</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="#" active="active">
+            <SidebarHeading to="" active="active">
               <Icon color="#004aad" size={1}>{<BiHelpCircle/>}</Icon>
               <SideTitle size={1}>Help</SideTitle>
             </SidebarHeading>
@@ -120,8 +129,15 @@ export default function Dashboard() {
         </MiddleContentCards>
 
         <RightContentContainer>
-         {/*  <Customer/> */}
-          <Sender/>
+        <Customer/>
+            <Routes>
+              <Route path='/dash' exact component={Dashboard}/>
+              <Route path='/dashboard/customer' component={Customer}/>
+              <Route path='/dashboard/group' component={Group}/>
+              <Route path='/dashboard/sender' component={Sender}/>
+              <Route path='/dashboard/bulksms' component={BulkSMS}/>
+            </Routes>
+
         </RightContentContainer>
 
       </MainContentContainer>
