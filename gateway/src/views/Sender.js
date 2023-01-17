@@ -48,40 +48,40 @@ function Sender() {
           <Form >
           <FormContentContainer>
             
-            <Label>
+            <Label style={{flex:'1 1 20%'}}>
               user ID:
             </Label>
-            <Input type="number" name="cid" value={newUser.user_id} onChange={handleChange} />
+            <Input style={{flex:'1 1 5%'}} type="number" name="cid" value={newUser.user_id} onChange={handleChange} />
             <br/> 
             
-            <Label>
+            <Label style={{flex:'1 1 20%'}}>
               First Name:
             </Label>
-            <Input type="text" name="firstName" value={newUser.firstName} onChange={handleChange} />
+            <Input style={{flex:'1 1 5%'}} type="text" name="firstName" value={newUser.firstName} onChange={handleChange} />
             <br/> 
 
-            <Label>
+            <Label style={{flex:'1 1 20%'}}>
               Last Name:
             </Label>
-            <Input type="text" name="lastName" value={newUser.lastName} onChange={handleChange} />
+            <Input style={{flex:'1 1 5%'}} type="text" name="lastName" value={newUser.lastName} onChange={handleChange} />
             <br/>
 
-            <Label>
+            <Label style={{flex:'1 1 20%'}}>
               Username:
             </Label>
-            <Input type="text" name="username" value={newUser.username} onChange={handleChange} />
+            <Input style={{flex:'1 1 5%'}} type="text" name="username" value={newUser.username} onChange={handleChange} />
             <br/>
             
-            <Label>
+            <Label style={{flex:'1 1 20%'}}>
               National ID:
             </Label>
-            <Input type="text" name="national_id" value={newUser.national_id} onChange={handleChange} />
+            <Input style={{flex:'1 1 5%'}} type="text" name="national_id" value={newUser.national_id} onChange={handleChange} />
             <br/>
             
-            <Label>
+            <Label style={{flex:'1 1 20%'}}>
               Phone Number:
             </Label>
-            <Input type="text" name="phone_number" value={newUser.phone_number} onChange={handleChange} />
+            <Input style={{flex:'1 1 5%'}} type="text" name="phone_number" value={newUser.phone_number} onChange={handleChange} />
             <br/>
           </FormContentContainer>
           <div style={{display: 'flex', gap:'2rem'}}>
@@ -113,7 +113,7 @@ function Sender() {
                   <TD>{item.national_id}</TD>
                   <TD>{item.phone_number}</TD>
                   <TD>{today.toLocaleDateString()}</TD>
-                  </TR>
+                </TR>
                 )
               )}
             </TBody>

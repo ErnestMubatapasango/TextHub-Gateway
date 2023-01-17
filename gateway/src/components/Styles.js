@@ -386,7 +386,7 @@ export const CardTitle = styled.div`
 `
  export const Table = styled.table`
   border-collapse: collapse;
-  width: 100%;
+  width: 70vw;
   padding: 0;
   margin: 0;
 `;
@@ -434,15 +434,16 @@ export const CardTitle = styled.div`
     display: flex;
     flex-wrap: wrap;  
     gap: 1rem;
+    align-items: center;
   `;
   export const Label = styled.label`
-    flex:1 1 20%;
+    
     text-align: left;
     padding-right: 10px;
 `;
 
   export const Input = styled.input`
-  flex: 1 1 5%;
+  
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
