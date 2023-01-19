@@ -12,10 +12,10 @@ import {BiHelpCircle} from "react-icons/bi"
 import {BsFillPersonCheckFill} from 'react-icons/bs'
 
 //navigation
-import { BrowserRouter as Router,Routes, Route} from 'react-router-dom'
+/* import { BrowserRouter as Router,Routes, Route} from 'react-router-dom' */
 
 
-
+import Customer from '../views/Customer'
 
 
 
@@ -130,13 +130,13 @@ export default function Dashboard() {
 
         <RightContentContainer>
         <Customer/>
-            <Routes>
+            {/* <Routes>
               <Route path='/dash' exact component={Dashboard}/>
               <Route path='/dashboard/customer' component={Customer}/>
               <Route path='/dashboard/group' component={Group}/>
               <Route path='/dashboard/sender' component={Sender}/>
               <Route path='/dashboard/bulksms' component={BulkSMS}/>
-            </Routes>
+            </Routes> */}
 
         </RightContentContainer>
 

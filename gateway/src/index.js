@@ -7,15 +7,15 @@ import reportWebVitals from './reportWebVitals';
 //in our index file we provide the auth stuff 
 //the provider takes in a store an a prop
 
-/* import { Provider } from 'react-redux';
-import store from './auth/store'; */
+import { Provider } from 'react-redux';
+import store from './auth/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-   {/*  <Provider store={store}> */}
+    <Provider store={store}>
       <App />
-   {/*  </Provider> */}
+    </Provider>
   </React.StrictMode>
 );
 
