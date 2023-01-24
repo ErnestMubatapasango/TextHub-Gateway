@@ -138,7 +138,8 @@ export default function Dashboard({children}) {
               <Route path='/customer' element={<Customer/>}></Route>
               <Route path='/group' element={<Group/>}></Route>
               <Route path='/sender' element={<Sender/>}></Route>     
-              <Route path='/sendSMS' element={<SendSMS/>}></Route>     
+              <Route path='/sendSMS' element={<SendSMS/>}></Route>   
+              <Route path='/bulkSMS' element={<BulkSMS/>}></Route>  
               <Route path='/smsHistory' element={<SMSHistory/>}></Route>
               <Route path='/sender' element={<Sender/>}></Route>
               <Route path='/help' element={<Help/>}></Route>
