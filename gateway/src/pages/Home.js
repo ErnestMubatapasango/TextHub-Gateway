@@ -8,8 +8,8 @@ export default function Home() {
     
     <HomeContainer>
       <LogoContainer  src={logo} width={10} />
-      <HomeTitle size={1.7}>Welcome to StrixPay</HomeTitle>
-      <HomeSubTitle>Home of Transacting Effortlessly</HomeSubTitle>
+      <HomeTitle size={1.7}>Welcome to TextHub</HomeTitle>
+      <HomeSubTitle>The SMS Gateway of Choice</HomeSubTitle>
       <HomeButtonContainer>
         <StyledButton width={6} to="/login">Login</StyledButton>
         <StyledButton width={6} to="/signup">Signup</StyledButton>
