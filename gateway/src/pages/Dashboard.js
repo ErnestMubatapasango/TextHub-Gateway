@@ -130,6 +130,7 @@ export default function Dashboard() {
 
         <RightContentContainer>
         <Customer/>
+        
             {/* <Routes>
               <Route path='/dash' exact component={Dashboard}/>
               <Route path='/dashboard/customer' component={Customer}/>
