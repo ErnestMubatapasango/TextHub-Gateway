@@ -12,14 +12,18 @@ import {BiHelpCircle} from "react-icons/bi"
 import {BsFillPersonCheckFill} from 'react-icons/bs'
 
 //navigation
-/* import { BrowserRouter as Router,Routes, Route} from 'react-router-dom' */
+import { Routes, Route} from 'react-router-dom'
 
 
-import Customer from '../views/Customer'
+import Customer from '../views/Customer';
+import Sender from '../views/Sender';
+import Group from '../views/Group'
+import BulkSMS from '../views/BulkSMS';
+import SendSMS from '../views/SendSMS';
+import SMSHistory from '../views/SMSHistory';
+import Help from '../views/Help'
 
-
-
-export default function Dashboard() {
+export default function Dashboard({children}) {
 
 
   const today = new Date()
@@ -34,42 +38,42 @@ export default function Dashboard() {
         </SidebarHeader>
         
         <SidebarMain>
-            <SidebarHeading to="/" activeClassName="any">
+           {/*  <SidebarHeading to="/" active==="any">
               <Icon color="#004aad" size={1}>{<MdSpaceDashboard/>}</Icon>
               <SideTitle size={1}>Dashboard</SideTitle>
-            </SidebarHeading>
+            </SidebarHeading> */}
 
-            <SidebarHeading to="/customers" activeClassName="any">
+            <SidebarHeading to="/dashboard/customer">
               <Icon color="#004aad" size={1}>{<MdOutlineSendToMobile/>}</Icon>
               <SideTitle size={1}>Customers</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="/groups" activeClassName="any">
+            <SidebarHeading to="/dashboard/group">
               <Icon color="#004aad" size={1}>{<GiWallet/>}</Icon>
               <SideTitle size={1}>Groups</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="#" activeClassName="any">
+            <SidebarHeading to="/dashboard/sendSMS">
               <Icon color="#004aad" size={1}>{<GiWallet/>}</Icon>
               <SideTitle size={1}>Send SMS</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="#" activeClassName="any">
+            <SidebarHeading to="/dashboard/bulkSMS">
               <Icon color="#004aad" size={1}>{<GiWallet/>}</Icon>
               <SideTitle size={1}>Bulk SMS</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="#" activeClassName="any">
+            <SidebarHeading to="/dashboard/smsHistory">
               <Icon color="#004aad" size={1}>{<FiActivity/>}</Icon>
               <SideTitle size={1}>SMS History</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="/sender" activeClassName="any">
+            <SidebarHeading to="/dashboard/sender">
               <Icon color="#004aad" size={1}>{<AiFillSetting/>}</Icon>
               <SideTitle size={1}>Sender Details</SideTitle>
             </SidebarHeading>
 
-            <SidebarHeading to="" active="active">
+            <SidebarHeading to="/dashboard/help">
               <Icon color="#004aad" size={1}>{<BiHelpCircle/>}</Icon>
               <SideTitle size={1}>Help</SideTitle>
             </SidebarHeading>
@@ -129,15 +133,16 @@ export default function Dashboard() {
         </MiddleContentCards>
 
         <RightContentContainer>
-        <Customer/>
-        
-            {/* <Routes>
-              <Route path='/dash' exact component={Dashboard}/>
-              <Route path='/dashboard/customer' component={Customer}/>
-              <Route path='/dashboard/group' component={Group}/>
-              <Route path='/dashboard/sender' component={Sender}/>
-              <Route path='/dashboard/bulksms' component={BulkSMS}/>
-            </Routes> */}
+           
+            <Routes>
+              <Route path='/customer' element={<Customer/>}></Route>
+              <Route path='/group' element={<Group/>}></Route>
+              <Route path='/sender' element={<Sender/>}></Route>     
+              <Route path='/sendSMS' element={<SendSMS/>}></Route>     
+              <Route path='/smsHistory' element={<SMSHistory/>}></Route>
+              <Route path='/sender' element={<Sender/>}></Route>
+              <Route path='/help' element={<Help/>}></Route>
+            </Routes>
 
         </RightContentContainer>
 
