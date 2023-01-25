@@ -3,10 +3,6 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup" 
 import Dashboard from './pages/Dashboard'
-import Customer from './views/Customer';
-import Sender from './views/Sender';
-import Group from './views/Group'
-import BulkSMS from './views/BulkSMS';
 import { BrowserRouter as Router,Routes, Route} from 'react-router-dom'
 
 

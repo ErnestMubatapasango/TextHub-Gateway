@@ -5,7 +5,7 @@ import { Icon, LogoContainer, SideBarContainer, SidebarHeader, SidebarMain, Side
 
 //icons
 import {AiFillSetting} from "react-icons/ai"
-import {MdSpaceDashboard, MdOutlineSendToMobile} from "react-icons/md"
+import { MdOutlineSendToMobile} from "react-icons/md"
 import { GiPayMoney, GiReceiveMoney, GiWallet, /* GiPayMoney, GiReceiveMoney, GiTakeMyMoney */} from "react-icons/gi"
 import {FiActivity} from "react-icons/fi"
 import {BiHelpCircle} from "react-icons/bi"
